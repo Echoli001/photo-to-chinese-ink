@@ -1,0 +1,83 @@
+{
+  "_comment": "骨架数据文件。13 个 key 对应 references/04-subject-routing-table.md 里的 13 类主体。每个类目的 main_route / aux_route / rejected_routes 目前都是 null，代表尚未从 v17 拆入内容。router.py 遇到 main_route 为 null 的类目会报告该类目'待补充'，不会编造一个路线。填内容时直接编辑本文件，同步更新 references/04-subject-routing-table.md 里的说明。",
+  "categories": {
+    "terraced_field": {
+      "label": "梯田 / 波浪 / 沙纹",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    },
+    "mountain_snow": {
+      "label": "山体 / 雪山",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    },
+    "river_lake_reflection": {
+      "label": "江河 / 湖泊 / 倒影",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    },
+    "forest_bamboo": {
+      "label": "森林 / 竹林",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    },
+    "flower_branch": {
+      "label": "花枝 / 藤蔓",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    },
+    "flower_field": {
+      "label": "花海 / 密集光斑",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    },
+    "jiangnan_water_town": {
+      "label": "江南 白墙黑瓦",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    },
+    "ancient_architecture": {
+      "label": "古建筑",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    },
+    "urban_day": {
+      "label": "都市（白天）",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    },
+    "urban_night": {
+      "label": "都市（夜景）",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    },
+    "farmland_grid": {
+      "label": "田野阵列（农田网格类）",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    },
+    "fishing_port": {
+      "label": "渔港",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    },
+    "abstract_line_network": {
+      "label": "已经是抽象线网的输入",
+      "main_route": null,
+      "aux_route": null,
+      "rejected_routes": []
+    }
+  }
+}
