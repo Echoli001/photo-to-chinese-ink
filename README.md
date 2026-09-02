@@ -1,12 +1,18 @@
 # Photo to Chinese Ink（照片转中国水墨）Skill
 
-把用户上传的照片、或用户写的文字场景描述，转成一段可以直接粘贴进
-Midjourney / 即梦等文生图工具的吴冠中风格水墨 prompt。当前是 MVP：只产出
-文本，不调用任何图像生成 API。
+Photo to Chinese Ink 把用户上传的照片，或写的一段文字场景描述，转成一段吴冠中风格的现代水墨画 prompt，可以直接粘贴进 Seedance, Image, Midjourney、即梦等文生图工具使用。整个流程分三步、且是确定性逻辑：诊断构图与主体 → 按 13 类主体路由表匹配风格规则 → 编译成最终 prompt，内置多重自查（防止水彩化描述、禁用措辞、签名印章等）。这是一个纯 prompt 生成 skill，不调用任何图像生成 API。
 
-流程分三步：**诊断**（模型看图/读文字，产出结构化诊断卡）→ **路由**（脚本
-按主体类别查路由表，确定性逻辑）→ **编译**（脚本把诊断卡+路由结果拼成最终
-prompt，含黑名单自查、技法数量校验等硬性检查）。
+Photo to Chinese Ink turns an uploaded photo — or a written scene description — into a Wu Guanzhong-style modern ink-wash art prompt, ready to paste into an image generator like Seedance, Image, Midjourney or 即梦. It works in three deterministic steps: diagnose the image's composition and subject, route it through a 13-category style table, and compile a final prompt with built-in guardrails against watercolor-style output, forbidden phrasing, and signature/seal artifacts. This is a prompt-generation skill only — it does not call any image-generation API itself.
+
+## 效果示例 / Examples
+
+下面三组「原图 → 水墨转化」的对比图，就是用这个 skill 生成的 prompt 出的图，和上传的原始照片对比：
+
+![水乡示例](docs/examples/example-01-water-town.jpg)
+
+![秋日枝桠示例](docs/examples/example-02-autumn-branches.jpg)
+
+![城市天际线示例](docs/examples/example-03-city-skyline.jpg)
 
 ## 安装 / 怎么用
 
