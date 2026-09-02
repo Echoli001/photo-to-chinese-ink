@@ -79,6 +79,7 @@ def route(diagnosis: dict, table: dict) -> dict:
         "main_route": entry["main_route"],
         "aux_route": entry.get("aux_route"),
         "rejected_routes": entry.get("rejected_routes", []),
+        "point_line_plane": entry.get("point_line_plane"),
     }
 
 
