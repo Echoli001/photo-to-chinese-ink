@@ -1,83 +1,214 @@
 {
-  "_comment": "骨架数据文件。13 个 key 对应 references/04-subject-routing-table.md 里的 13 类主体。每个类目的 main_route / aux_route / rejected_routes 目前都是 null，代表尚未从 v17 拆入内容。router.py 遇到 main_route 为 null 的类目会报告该类目'待补充'，不会编造一个路线。填内容时直接编辑本文件，同步更新 references/04-subject-routing-table.md 里的说明。",
+  "_comment": "13 个 key 对应 references/04-subject-routing-table.md 里的 13 类主体。main_route/aux_route 三字段（ink_block_handling/negative_space_ratio/texture_method）已从 v17（Wu_Guanzhong_Style_Grammar.md）第 3 章 3.13-3.18 节、第 7 章 R2 回归测试表（1751-1764 行）、第 2 章墨材料词汇（约 200-355 行）人工核对填入。每个类目的 _source 字段标注对应 v17 行号/章节和 R2 编号，方便复核，不是脚本读取字段。point_line_plane 同理，是 R2 表给出的点/线/面权重三元组，供路由和后续 compiler.py 参考，但不属于本表固定的 3 字段 schema（schema 已与用户确认为 ink_block_handling/negative_space_ratio/texture_method 三项，不再改动），只作为溯源和辅助信息保留。",
+  "route_schema": {
+    "_comment": "main_route / aux_route（非 null 时）都遵循这个结构，仅供参考，不是脚本读取的字段。",
+    "ink_block_handling": "墨块处理——例如整块泼墨 vs 层叠积墨 vs 干笔擦染，具体取值从 v17 第 3 章拆入",
+    "negative_space_ratio": "留白比例——这里指该路线【应该产出的目标留白比例】，不是诊断卡里读到的原图留白比例（两者字段同名但含义不同，diagnosis 是读原图，这里是定目标）",
+    "texture_method": "皴法——传统皴法名称或 v17 里定义的皴法变体，具体取值从 v17 第 3 章拆入"
+  },
+  "mixed_subject_rule": {
+    "_comment": "解决 04-subject-routing-table.md TODO #3（多主体混合场景）。来源：v17 R2-08（1764 行）'水乡夜景、复杂混合场景 → 混合 → 只选主语言，不平均分配 → 依诊断决定'。",
+    "rule": "当诊断卡识别出多个主体类别同时存在于同一画面（例如江南建筑+水面倒影、都市夜景+河道），router.py 不应该把多条路线的三个子字段做平均或叠加，而是要求诊断卡在 subject_category 之外，额外给出一个 dominant_subject（主语言）判断——由模型在诊断阶段基于画面视觉重量/主体占比/构图焦点判断哪个主体是主语言，路由脚本只按 dominant_subject 单独查表取一条主路线；其余次要主体最多降级为 aux_route 的候选来源，不能同时把两套 ink_block_handling/texture_method 混在一起写进同一个 route。",
+    "todo_for_router_py": "diagnosis card schema（00-source-diagnosis-card.md）目前的 subject_category 是单值字段，尚未加 dominant_subject / secondary_subjects 结构；router.py 骨架也还没读取这个新字段。这是本次路由表填充之外的独立改动，留待下一步实现，不在这次'一次性填 13 类'范围内直接改 router.py 代码。"
+  },
   "categories": {
     "terraced_field": {
       "label": "梯田 / 波浪 / 沙纹",
-      "main_route": null,
+      "main_route": {
+        "ink_block_handling": "以线群为主，墨块极少，仅在线群交汇或转折处点缀锚点墨点，不整块泼墨压过线网",
+        "negative_space_ratio": "偏高（约 65%-85% 纸面留白）——只保留约 15%-35% 的重复线作为可见骨架，其余重复单元省略而非逐一摹写",
+        "texture_method": "干擦短皴表现线条质感，转折/断点处用飞白，不做逐线临摹的工笔式精描"
+      },
       "aux_route": null,
-      "rejected_routes": []
+      "rejected_routes": [
+        "逐线临摹每一道梯田/波浪/沙纹（v17 明确要求'线群重谱而非逐线临摹'，逐线照抄会让画面变成图案化重复而非水墨语言）",
+        "整块泼墨覆盖线网（会吞掉本该由线主导的结构，与该类目点/线/面 9/81/10 的线主导权重矛盾）"
+      ],
+      "_source": "v17 R2-01（约 1752 行，9/81/10，摄影性重复线→线群重谱而非逐线临摹）；线 87（重复对象通常只选约 15%-35% 作为可见骨架）",
+      "point_line_plane": "9/81/10"
     },
     "mountain_snow": {
       "label": "山体 / 雪山",
-      "main_route": null,
+      "main_route": {
+        "ink_block_handling": "整块泼墨核起底体量，叠加积墨层叠加厚，让山体/雪体有重量感",
+        "negative_space_ratio": "中等（约 50%-70%）——雪面/云雾等亮部负形承担主要留白，但因面权重高（65%），墨块占比高于线主导类目",
+        "texture_method": "焦干立骨表现山脊/岩锋结构转折，山体阴影过渡处用干笔擦染"
+      },
       "aux_route": null,
-      "rejected_routes": []
+      "rejected_routes": [
+        "只勾轮廓线不给体量（v17 R2-04 明确'面有重量，线仍控制方向'，纯线描会丢失该类目要求的体量感）"
+      ],
+      "_source": "v17 R2-04（约 1755 行，10/25/65，山体/雪/浓荫→连续体量→面有重量线仍控制方向）；线 252（焦干立骨用于岩锋等结构折线）；线 1507/1509（雪山配色表）",
+      "point_line_plane": "10/25/65"
     },
     "river_lake_reflection": {
       "label": "江河 / 湖泊 / 倒影",
-      "main_route": null,
+      "main_route": {
+        "ink_block_handling": "先水后墨分层铺设，倒影处用倒斜墨块表现水面对建筑/山体的镜像扭曲，而非直接复制主体轮廓",
+        "negative_space_ratio": "偏高（约 55%-75%，取 v17 一般留白建议基线）——水面本身作为大面积负形留白",
+        "texture_method": "波动水线表现水纹/涟漪，破局线点在倒影边界处打断规整倒影感，避免倒影过于工整"
+      },
       "aux_route": null,
-      "rejected_routes": []
+      "rejected_routes": [
+        "把倒影画成主体的镜像复制（v17 要求倒斜墨块+破局线点制造扭曲和不规则感，而不是精确对称复制）"
+      ],
+      "_source": "v17 R2-05（约 1757 行，12/32/56*，白墙/黑瓦/河道/倒影→...→并屋成团、先水后墨、墨彩油彩叠置、倒斜墨块与破局线点）；线 1261-1266（倒影线专属规则）；线 1282-1317（倒斜墨块规则）；线 136（留白 55%-75% 一般建议）",
+      "point_line_plane": "12/32/56*（与江南白墙黑瓦共用同一 R2 行，* 号标注见 v17 原表）"
     },
     "forest_bamboo": {
       "label": "森林 / 竹林",
-      "main_route": null,
+      "main_route": {
+        "ink_block_handling": "小面积积墨点缀树冠/枝叶密集处，不整块泼墨，避免面吞掉线网",
+        "negative_space_ratio": "中等偏高（约 55%-75%，取一般留白基线）——枝干间隙作为线定义的留白通道",
+        "texture_method": "焦干立骨表现树干结构，短皴+飞白表现树皮/枝叶肌理"
+      },
       "aux_route": null,
-      "rejected_routes": []
+      "rejected_routes": [
+        "整块墨面覆盖树冠（v17 R2-02 明确'线与点补足肌理，面不吞线'，整块化会让分叉骨架的线主导地位丢失）"
+      ],
+      "_source": "v17 R2-02（约 1752 行，25/55/20，森林/枯枝/竹林→分叉骨架+小重复→线与点补足肌理面不吞线）；线 252（焦干立骨用于树干）；线 645 起 §3.13 森林比例",
+      "point_line_plane": "25/55/20"
     },
     "flower_branch": {
       "label": "花枝 / 藤蔓",
-      "main_route": null,
+      "main_route": {
+        "ink_block_handling": "以墨彩点标记生长附着点/花头，不做整块墨面，墨块只作为线路径上的节点强调",
+        "negative_space_ratio": "中等（约 55%-75%，取一般留白基线），依生长路径的疏密结构决定局部留白多少",
+        "texture_method": "游丝细线表现藤蔓/枝条的缠绕，黑线突进与灰线回弹交替表现生长的'结—放—再结'节奏"
+      },
       "aux_route": null,
-      "rejected_routes": []
+      "rejected_routes": [
+        "把藤蔓/花枝画成整块墨团或色块（v17 R2-02B 是线主导 59%，核心是生长路径的线语言，不是面语言）"
+      ],
+      "_source": "v17 R2-02B（约 1752-1753 行，31/59/10，藤蔓/紫藤/垂柳/攀援植物→生长路径+附着点链→黑线突进、灰线回弹、游丝纠缠、墨彩点跳跃；结—放—再结）",
+      "point_line_plane": "31/59/10"
     },
     "flower_field": {
       "label": "花海 / 密集光斑",
-      "main_route": null,
-      "aux_route": null,
-      "rejected_routes": []
+      "main_route": {
+        "ink_block_handling": "以点簇聚散表现花丛/光斑密度，不整块铺色，色点/墨点按聚散节拍分布而非均匀填满",
+        "negative_space_ratio": "偏高（约 55%-75%，取一般留白基线）——点簇之间的空隙是主要留白来源",
+        "texture_method": "以飞白点彩为主，texture_method 在该类目中作用次要（点主导 55%），不强行套用皴法"
+      },
+      "aux_route": {
+        "ink_block_handling": "密花灌木/满幅花丛子路由：更高密度的点簇+少量小面积积墨托底",
+        "negative_space_ratio": "中等（约 55%-75%），略低于稀疏花枝类，因密度更高",
+        "texture_method": "飞白点彩，局部密集处用短皴分隔点簇边界"
+      },
+      "rejected_routes": [
+        "用统一饱和色块铺满画面（v17 线 1681 失败模式明确指出、线 1539 要求主导色让位规则——强势主色会把点簇压成单一色域，丢失聚散节拍）",
+        "把花海处理为面主导的墨块语言（R2-03 是点主导 55%，不是面主导类目）"
+      ],
+      "_source": "v17 R2-03（约 1754 行，55/25/20，花海/灯群/人群→点簇→聚散、尺度与色彩节拍）；线 906（dense_flower_shrub 子路由 58/32/10）；线 1513/1539（花海强势主色让位规则）；线 1681（花海失败模式条目）",
+      "point_line_plane": "55/25/20（主路线）/ 58/32/10（密花灌木子路由）"
     },
     "jiangnan_water_town": {
       "label": "江南 白墙黑瓦",
-      "main_route": null,
-      "aux_route": null,
-      "rejected_routes": []
+      "main_route": {
+        "ink_block_handling": "浓淡屋顶墨团化——相邻屋顶'并屋成团'合并为整体墨团，不逐片描绘单片屋脊瓦片；水面先水后墨分层，墨彩/油彩局部叠置",
+        "negative_space_ratio": "偏高（约 55%-75%，取一般留白基线）——白墙作为主要负形留白载体，是该类目留白的主要来源",
+        "texture_method": "焦干立骨表现屋脊/檐口结构转折，破墨（每张图限 1-3 处）用于墙面阴影/水面交界处制造变化"
+      },
+      "aux_route": {
+        "ink_block_handling": "若画面同时有水面倒影，追加 river_lake_reflection 主路线的倒斜墨块+波动水线处理",
+        "negative_space_ratio": "同主路线，约 55%-75%",
+        "texture_method": "波动水线+破局线点（倒影部分）"
+      },
+      "rejected_routes": [
+        "逐片描绘可辨的屋脊/飞檐/三角坡面（v17 §3.16B 明确：即使边缘已湿润，逐片可辨仍是'具象建筑+水墨滤镜'层级，未达到屋顶群整体墨团化的抽象层级）",
+        "用米黄仿古纸等题材惯例自动触发的纸色（05-quality-checklist.md 已列为硬性禁止项）"
+      ],
+      "_source": "v17 R2-05（约 1757 行，12/32/56*，白墙/黑瓦/河道/倒影→...→并屋成团、先水后墨、墨彩油彩叠置、倒斜墨块与破局线点）；§3.16B 屋顶墨团化与浓淡协调模块（约 1141-1143 行）；线 252（焦干立骨用于屋脊）",
+      "point_line_plane": "12/32/56*"
     },
     "ancient_architecture": {
       "label": "古建筑",
-      "main_route": null,
-      "aux_route": null,
-      "rejected_routes": []
+      "main_route": {
+        "ink_block_handling": "复用 jiangnan_water_town 主路线的屋顶墨团化处理（并屋成团）——适用于有明显坡屋顶/檐口结构的宫殿、寺庙等建筑群",
+        "negative_space_ratio": "同 jiangnan_water_town，约 55%-75%",
+        "texture_method": "同 jiangnan_water_town：焦干立骨表现屋脊/檐口，破墨（1-3 处）制造墙面/结构变化"
+      },
+      "aux_route": {
+        "ink_block_handling": "若建筑以墙体/台基/城墙体量为主而非坡屋顶群（例如城墙、宫墙、高台建筑），改用 urban_day 主路线的体积合并压平叠置处理",
+        "negative_space_ratio": "同 urban_day，取决于天空/留白比例",
+        "texture_method": "干笔擦染表现墙体阴影，焦干立骨表现结构棱线"
+      },
+      "rejected_routes": [
+        "为'古建筑'单独发明一套专属路由或专属纸色（v17 线 307 明确：'题材惯例只能作为弱参考；古建筑、江南、水墨不能自动触发黄纸'——古建筑本身不构成独立的材料/路由触发条件，必须按画面实际结构归入屋顶墨团化或体积合并两条既有路线）"
+      ],
+      "_source": "v17 线 305-309（第 4 条：题材惯例弱参考原则，古建筑不能自动触发黄纸）——v17 全文未给'古建筑'单独设 §3.x 专属路由小节，故按结构相似性复用 jiangnan_water_town（R2-05）/urban_day（R2-06）两条既有路线，不是凭空编造新路线"
     },
     "urban_day": {
       "label": "都市（白天）",
-      "main_route": null,
+      "main_route": {
+        "ink_block_handling": "浓淡墨色体积合并——把密集建筑群压平叠置，高低错落表现天际线节拍，可以不用统一透视",
+        "negative_space_ratio": "中等（约 40%-60%）——面权重高（60%），天空/间隙作为主要留白但占比低于线/点主导类目",
+        "texture_method": "干笔擦染表现建筑立面阴影，焦干立骨表现天际线结构棱线"
+      },
       "aux_route": null,
-      "rejected_routes": []
+      "rejected_routes": [
+        "用统一灭点透视精确还原建筑群（v17 R2-06 明确'可不用统一透视'，强行统一透视会拉回写实建筑效果）"
+      ],
+      "_source": "v17 R2-06（约 1758 行，15/25/60，都市全景/密集建筑群→浓淡墨色体积+天际线节拍→体积合并、压平叠置、高低错落；可不用统一透视）",
+      "point_line_plane": "15/25/60"
     },
     "urban_night": {
       "label": "都市（夜景）",
-      "main_route": null,
+      "main_route": {
+        "ink_block_handling": "墨色体积打底作为夜间画面底盘，结构线网叠加其上，彩点（灯光）点缀激活夜间密度",
+        "negative_space_ratio": "偏低（约 25%-45%）——夜景整体基调更暗更密，纸面留白比例低于白天都市类",
+        "texture_method": "结构线网以几何线条为主表现道路/建筑边缘，非传统皴法"
+      },
       "aux_route": null,
-      "rejected_routes": []
+      "rejected_routes": [
+        "把灯光处理成大面积高饱和色块铺满（v17 R2-06B 是'灯点'而非'灯面'，彩点应保持点状而非扩散成块，否则会盖过体积+线网的底盘结构）"
+      ],
+      "_source": "v17 R2-06B（约 1758-1759 行，24/36/40，都市夜景/道路与窗灯→墨色体积+结构线+灯点→体积为底盘，线网与彩点激活夜间密度）；线 1507/1509（都市夜景配色表）",
+      "point_line_plane": "24/36/40"
     },
     "farmland_grid": {
       "label": "田野阵列（农田网格类）",
-      "main_route": null,
+      "main_route": {
+        "ink_block_handling": "重复单元阵列化处理，但要加入微扰（阵列微扰）打破机械规整感，不做绝对整齐的网格复制",
+        "negative_space_ratio": "偏高（约 55%-75%，取一般留白基线）——纸白裂隙贯穿阵列作为主要留白/间隔",
+        "texture_method": "田垄边缘用短皴/干擦表现，不强行套用山石类皴法"
+      },
       "aux_route": null,
-      "rejected_routes": []
+      "rejected_routes": [
+        "用统一焦点透视精确还原农田网格（v17 R2-06C 明确'无焦点透视'，且要求'画外延伸'——网格应向画外延展而非收束于一个透视消失点）",
+        "把阵列画成完全规则的机械重复（要求'阵列微扰'，完全规则会显得图案化而非水墨语言）"
+      ],
+      "_source": "v17 R2-06C（约 1759-1760 行，鸟瞰青苗田/渔港船群/村镇屋顶→重复单元+平面拓扑→阵列微扰、画外延伸、纸白裂隙、无焦点透视→依对象路由决定）",
+      "point_line_plane": "依对象路由决定（R2-06C 未给单一固定三元组，需结合具体画面密度判断）"
     },
     "fishing_port": {
       "label": "渔港",
-      "main_route": null,
+      "main_route": {
+        "ink_block_handling": "与 farmland_grid 同源（R2-06C）：船群/码头重复单元阵列化并加入微扰，不做绝对整齐排列",
+        "negative_space_ratio": "偏高（约 55%-75%，取一般留白基线）——船只间的水面/纸白裂隙作为主要留白",
+        "texture_method": "干擦飞白表现船体/桅杆结构线，避免精细具象刻画每艘船"
+      },
       "aux_route": null,
-      "rejected_routes": []
+      "rejected_routes": [
+        "精确写实描绘每艘船只的具体结构（与 terraced_field 同理，v17 要求重复单元的'线群重谱'而非逐一临摹）",
+        "用统一焦点透视（R2-06C 同样要求'无焦点透视'+'画外延伸'）"
+      ],
+      "_source": "v17 R2-06C（约 1759-1760 行，鸟瞰青苗田/渔港船群/村镇屋顶→重复单元+平面拓扑→阵列微扰、画外延伸、纸白裂隙、无焦点透视→依对象路由决定）",
+      "point_line_plane": "依对象路由决定（与 farmland_grid 同一 R2 行，未给单一固定三元组）"
     },
     "abstract_line_network": {
       "label": "已经是抽象线网的输入",
-      "main_route": null,
+      "main_route": {
+        "ink_block_handling": "低干预——只做材质翻译（例如把线稿/矢量线转成墨线质感），不额外添加新的墨块体量，不重新构图",
+        "negative_space_ratio": "保留源图既有留白比例，不压缩、不额外增减密度",
+        "texture_method": "沿用源图已有的线语言技法本身，仅转换媒介质感（例如让线条呈现墨色浓淡变化），不重新设计皴法"
+      },
       "aux_route": null,
-      "rejected_routes": []
+      "rejected_routes": [
+        "对已经抽象化的线网重新构图或大幅改动密度（v17 R2-07 明确'低干预材质翻译、不丢密度'，该类目源图本身已完成从具象到抽象的转化，不需要也不应该再次'转化'）"
+      ],
+      "_source": "v17 R2-07（约 1760-1761 行，8/77/15，已有抽象线网作品→成熟线语言→低干预材质翻译、不丢密度）",
+      "point_line_plane": "8/77/15"
     }
   }
 }
