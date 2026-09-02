@@ -34,7 +34,7 @@ import pytest
 
 TESTING_DIR = Path(__file__).resolve().parent
 REPO_ROOT = TESTING_DIR.parent
-SCRIPTS_DIR = REPO_ROOT / ".claude" / "skills" / "wu-guanzhong-ink" / "scripts"
+SCRIPTS_DIR = REPO_ROOT / ".claude" / "skills" / "photo-to-chinese-ink" / "scripts"
 FIXTURES_DIR = TESTING_DIR / "fixtures"
 ROUTING_TABLE_PATH = SCRIPTS_DIR / "data" / "subject_routing_table.json"
 

@@ -1,21 +1,23 @@
 ---
-name: wu-guanzhong-ink
+name: photo-to-chinese-ink
 description: >
-  Converts a user-uploaded photo, or a user-written scene description, into a
-  Wu Guanzhong (吴冠中)-style modern ink-wash art prompt — structured as a
-  diagnosis card, a routing decision, and a final compiled text prompt ready
-  to paste into an external image generator (Midjourney, 即梦, etc.). This
-  skill does NOT call any image-generation API itself; it only produces text.
-  Use this skill whenever the user asks to turn a photo into "吴冠中风格"、
-  "水墨风格"、"国画风格"、ink-wash art, or Chinese modern ink painting —
-  even if they just upload a photo and say something short like "帮我做成
-  水墨画" or "转成国画" without naming Wu Guanzhong explicitly, or if they
-  paste/describe a scene and ask for an ink-painting-style prompt for it.
+  Photo to Chinese Ink — transforms photos into expressive Chinese ink-wash
+  artwork. Converts a user-uploaded photo, or a user-written scene
+  description, into a Wu Guanzhong (吴冠中)-style modern ink-wash art prompt
+  — structured as a diagnosis card, a routing decision, and a final compiled
+  text prompt ready to paste into an external image generator (Midjourney,
+  即梦, etc.). This skill does NOT call any image-generation API itself; it
+  only produces text. Use this skill whenever the user asks to turn a photo
+  into "吴冠中风格"、"水墨风格"、"国画风格"、ink-wash art, or Chinese modern
+  ink painting — even if they just upload a photo and say something short
+  like "帮我做成水墨画" or "转成国画" without naming Wu Guanzhong explicitly,
+  or if they paste/describe a scene and ask for an ink-painting-style prompt
+  for it.
 compatibility: Requires Python 3.8+ available on PATH (stdlib only, no
   external packages) for scripts/router.py and scripts/compiler.py.
 ---
 
-# 吴冠中水墨转化 Skill
+# Photo to Chinese Ink（照片转中国水墨）Skill
 
 ## 这是什么
 

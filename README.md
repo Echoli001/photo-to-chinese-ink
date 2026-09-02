@@ -1,11 +1,12 @@
-# 吴冠中水墨转化 Skill
+# Photo to Chinese Ink（照片转中国水墨）Skill
 
-把用户上传的照片、或用户写的文字场景描述，转成一段可以直接粘贴进
-Midjourney / 即梦等文生图工具的吴冠中风格水墨 prompt。当前是 MVP：只
-产出文本，不调用任何图像生成 API。
+Transform photos into expressive Chinese ink-wash artwork. 把用户上传的照片、
+或用户写的文字场景描述，转成一段可以直接粘贴进 Midjourney / 即梦等文生图
+工具的吴冠中风格水墨 prompt。当前是 MVP：只产出文本，不调用任何图像生成
+API。
 
-Skill 本体在：[`.claude/skills/wu-guanzhong-ink/`](.claude/skills/wu-guanzhong-ink/)，
-入口是 [`SKILL.md`](.claude/skills/wu-guanzhong-ink/SKILL.md)。
+Skill 本体在：[`.claude/skills/photo-to-chinese-ink/`](.claude/skills/photo-to-chinese-ink/)，
+入口是 [`SKILL.md`](.claude/skills/photo-to-chinese-ink/SKILL.md)。
 
 **跨平台说明**：`router.py`/`compiler.py` 只依赖 Python 标准库，
 `references/*.md` 和 `subject_routing_table.json` 都是纯文本文件，本质上
@@ -30,7 +31,7 @@ Skill 本体在：[`.claude/skills/wu-guanzhong-ink/`](.claude/skills/wu-guanzho
 ## 目录结构
 
 ```
-.claude/skills/wu-guanzhong-ink/
+.claude/skills/photo-to-chinese-ink/
 ├── SKILL.md                            入口：三步流程说明（诊断→路由→编译）
 ├── references/                         研究内容拆分后的文档（模型按需读取）
 │   ├── 00-source-diagnosis-card.md     六张卡 schema、诊断维度
@@ -58,7 +59,7 @@ Skill 本体在：[`.claude/skills/wu-guanzhong-ink/`](.claude/skills/wu-guanzho
 ## 怎么跑
 
 ```bash
-cd .claude/skills/wu-guanzhong-ink
+cd .claude/skills/photo-to-chinese-ink
 
 # 第 1 步（诊断卡）由模型完成，不是脚本——参考 references/00 的 schema
 # 手写或让模型生成一份诊断卡 JSON，例如 /tmp/diagnosis.json
@@ -161,7 +162,7 @@ python -m pytest Testing/test_p6_regression.py -v
 "吴冠中"姓名的商标权，也不授予用这个工具生成的美术作品/图片任何权利；本
 项目是独立的、非官方的风格研究工具，与吴冠中先生的遗产管理方/基金会/权
 利人没有任何关联或合作关系。详见
-[`references/08-originality-guardrails.md`](.claude/skills/wu-guanzhong-ink/references/08-originality-guardrails.md)。
+[`references/08-originality-guardrails.md`](.claude/skills/photo-to-chinese-ink/references/08-originality-guardrails.md)。
 
 ## Git / GitHub
 
