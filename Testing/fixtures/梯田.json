@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "terraced_field",
+  "dominant_subject": "terraced_field",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "low",
+    "line": "high",
+    "plane": "high",
+    "note": "画面没有突出的孤立锚点，点依赖低；梯田田埂的等高线层层弯曲缠绕，是画面最核心的方向骨架，线依赖高；蓄水梯田反光的大面积金色/灰蓝水面、云海雾团、远山剪影各自构成大块面，面依赖高。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "俯视",
+  "light_condition": "清晨，日出，云雾缭绕",
+  "color_tendency": "云海雾气的灰白冷调与朝阳染红的金橙暖调强烈对比，梯田水面倒映天空色彩",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "natural",
+    "achromatic_base": ["云雾灰白"],
+    "dominant_chromatic_family": ["金橙"],
+    "secondary_chromatic_family": ["墨绿"],
+    "accent_hues": ["朝霞粉红"],
+    "chromatic_carrier": "plane",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "line",
+    "rhythm_profile": ["梯田等高线层层弯曲的重复节奏", "云海雾团的横向流动节奏"],
+    "valuable_invariants": ["梯田田埂弯曲缠绕的等高线骨架", "云海分隔天地的横向构图", "水面倒映朝霞的色彩层次"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的空间纵深与光影细节"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.4,
+    "detail_deletion_target": 0.65,
+    "allowed_changes": ["梯田等高线概括为几条主要弯曲骨线，不逐层描绘", "云海压平为大面积留白或淡墨横向块面", "水面反光简化为大色块，弱化写实光影细节"],
+    "forbidden_changes": ["逐层精确复制梯田田埂的写实纹理", "精确还原朝霞的渐变光影层次"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["非对称留白", "疏密突变"],
+    "note": "云海留白偏向画面中部偏左，呼应原图云雾分布，不居中对称；梯田田埂近景密集、远景渐疏，形成疏密突变的纵深节奏。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

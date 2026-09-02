@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "urban_day",
+  "dominant_subject": "urban_day",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "low",
+    "line": "high",
+    "plane": "high",
+    "note": "画面几乎没有孤立重复的小节奏节点，点依赖低；玻璃幕墙的竖直窗格线群、老建筑的窗檐线以及云朵在玻璃上的反光边界共同构成密集方向线，线依赖高；大面积蓝天、白云与玻璃幕墙反光形成的镜面色块构成主形块，面依赖高。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "仰视",
+  "light_condition": "白天，晴天",
+  "color_tendency": "蓝天与玻璃幕墙的天蓝色调统一画面，两侧石材老建筑呈灰褐色，与蓝色形成冷暖对比",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["白云", "灰褐老建筑"],
+    "dominant_chromatic_family": ["天蓝"],
+    "secondary_chromatic_family": ["灰褐石材"],
+    "accent_hues": [],
+    "chromatic_carrier": "plane",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "medium",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "plane",
+    "rhythm_profile": ["玻璃幕墙竖直窗格的密集线性重复"],
+    "valuable_invariants": ["仰视透视下高楼向上收束的锥形轮廓", "玻璃幕墙反射天空与老建筑形成的虚实叠影", "新旧建筑并置的两侧对比构图"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的仰视空间透视和玻璃反光材质细节"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.45,
+    "detail_deletion_target": 0.6,
+    "allowed_changes": ["玻璃幕墙窗格简化为疏密不均的墨线束，不逐格描绘", "幕墙反光概括为几块浓淡不同的蓝灰色块", "两侧老建筑概括为简练墨色剪影块"],
+    "forbidden_changes": ["逐格精确描绘幕墙窗格与老建筑立面装饰细节", "精确复制玻璃反光的写实镜面效果"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["疏密突变", "方向反拍"],
+    "note": "幕墙竖线密度从楼体中心向边缘略有起伏，用疏密突变打破机械重复感；幕墙反光区域的虚影线条方向与实体窗格竖线形成反差，用方向反拍表现虚实叠影关系。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

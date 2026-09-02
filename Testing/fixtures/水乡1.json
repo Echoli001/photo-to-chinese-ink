@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "jiangnan_water_town",
+  "dominant_subject": "jiangnan_water_town",
+  "secondary_subjects": ["river_lake_reflection"],
+  "point_line_plane_dependency": {
+    "point": "high",
+    "line": "high",
+    "plane": "medium",
+    "note": "两岸建筑窗户/灯笼的暖光是密集重复节奏节点，水中倒影把这套点阵重复了一遍，点依赖高；河道本身是贯穿画面的主势线，两岸建筑边缘线向远处收束形成次势线，山脊线是第三层方向线，线依赖高；天空-远山雾气团块、水面反光大平面、建筑暗色剪影块构成主形块，但细节主要靠点和线承载，面依赖中等。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "平视",
+  "light_condition": "夜晚",
+  "color_tendency": "整体冷调（雾蓝灰的山体与天空、灰蓝水面）与暖调（建筑灯光的橙黄）强对比，冷色打底、暖色作点状点缀",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["墨灰", "雾蓝灰"],
+    "dominant_chromatic_family": ["蓝灰"],
+    "secondary_chromatic_family": ["暖橙黄"],
+    "accent_hues": ["灯笼暖橙", "窗光暖黄"],
+    "chromatic_carrier": "point",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "mixed",
+    "rhythm_profile": ["两岸灯光的重复点阵", "水面倒影重复同一组点阵", "远山轮廓的起伏节奏"],
+    "valuable_invariants": ["河道贯穿画面的主势线", "两岸建筑夹河而立的对称性构图", "远山雾气制造的纵深层次", "近景小船与人物的叙事锚点"],
+    "missing_quality": ["缺乏明确的点线面提炼，仍是完整的摄影空间透视和材质细节"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.4,
+    "detail_deletion_target": 0.65,
+    "allowed_changes": ["屋顶墨团化，并屋成团", "河道两岸灯光转为彩点/墨点节奏", "远山压缩为大块面墨韵，弱化写实光影层次", "水面倒影用倒斜墨块与波动水线重新谱写，不逐一复制建筑轮廓"],
+    "forbidden_changes": ["逐片描绘可辨的屋脊飞檐", "精确复制水面倒影为对称镜像", "统一透视精确还原河道纵深"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["彩点脱轨", "疏密突变", "非对称留白"],
+    "note": "两岸灯笼/窗光在水中的倒影不应精确镜像对称，用彩点脱轨制造错位跳跃感；建筑与灯光密度从近景向雾中远景递减，用疏密突变表现纵深节奏；雾气与天空留白偏向画面上方和远山一侧，不居中对称，用非对称留白呼应原图构图。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

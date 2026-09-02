@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "fishing_port",
+  "dominant_subject": "fishing_port",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "high",
+    "line": "medium",
+    "plane": "high",
+    "note": "大量渔船散布水面，剪影反复出现，是主要节奏节点，点依赖高；桅杆、渔网支架的细线与海岸线构成方向骨架，但不算密集，线依赖中等；大面积金色晚霞天空与反光水面构成主形块，面依赖高。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "平视偏俯",
+  "light_condition": "黄昏，日落，逆光",
+  "color_tendency": "金橙色晚霞天空与灰蓝色水面对比，渔船整体呈深色剪影，冷暖对比柔和统一",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["渔船深色剪影"],
+    "dominant_chromatic_family": ["金橙"],
+    "secondary_chromatic_family": ["灰蓝"],
+    "accent_hues": [],
+    "chromatic_carrier": "plane",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "mixed",
+    "rhythm_profile": ["渔船剪影散布水面的重复点阵", "远近渔船大小错落形成的透视节奏"],
+    "valuable_invariants": ["渔船群聚于水面形成的整体构图", "海天交界的水平分割线", "逆光剪影带来的强烈明暗对比"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的逆光光晕与水面反光细节"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.4,
+    "detail_deletion_target": 0.65,
+    "allowed_changes": ["渔船群简化为大小错落的墨点/墨块节奏，不逐船描绘细节", "晚霞天空压平为大面积暖色留白或淡墨渲染", "水面反光简化为横向墨线，弱化写实光斑"],
+    "forbidden_changes": ["逐船精确描绘渔船结构与桅杆细节", "精确复制晚霞的渐变光影层次"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["疏密突变", "错位"],
+    "note": "近景渔船密集、远景渔船渐疏渐小，形成疏密突变的纵深节奏；部分渔船位置与整齐的水平排列故意错位，避免过于规整的构图，呼应原图自然停泊的随机感。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

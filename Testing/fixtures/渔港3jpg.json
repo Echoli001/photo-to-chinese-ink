@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "fishing_port",
+  "dominant_subject": "fishing_port",
+  "secondary_subjects": ["river_lake_reflection"],
+  "point_line_plane_dependency": {
+    "point": "high",
+    "line": "high",
+    "plane": "medium",
+    "note": "两位渔民及其抄网、水桶是画面唯一的叙事锚点式节奏节点，点依赖高；密集竹竿及其在水中的倒影构成贯穿画面的竖直线阵，线依赖高；金色滩涂水面大平面构成主形块，面依赖中等。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "俯视",
+  "light_condition": "夜晚",
+  "color_tendency": "整体被落日染成统一的金橙色调，竹竿与人物呈深褐/黑色剪影，仅渔民衣着有小面积红绿点缀",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["深褐剪影"],
+    "dominant_chromatic_family": ["金橙"],
+    "secondary_chromatic_family": ["浅金黄滩涂"],
+    "accent_hues": ["渔民红衣", "渔民绿裤"],
+    "chromatic_carrier": "line",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "medium",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "line",
+    "rhythm_profile": ["竹竿疏密不一地散布水面的竖线节奏", "竹竿倒影重复同一组竖线节奏"],
+    "valuable_invariants": ["竹竿群随机散布但整体密度均衡的构图", "俯视视角下水面被压平为一个大平面", "两位渔民作为唯一的具象叙事锚点"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的滩涂空间透视"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.35,
+    "detail_deletion_target": 0.7,
+    "allowed_changes": ["竹竿简化为疏密不均的墨线束，不逐根精确定位", "水面整体压平为大面积暖色平涂，弱化写实反光细节", "渔民与抄网概括为简练墨色剪影"],
+    "forbidden_changes": ["逐根精确描绘竹竿位置与倾斜角度", "精确复制水面的写实倒影细节"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["彩点脱轨", "非对称留白"],
+    "note": "两位渔民的位置不必精确复刻原图坐标，用彩点脱轨制造自然错落感；竹竿在画面左右分布不均，右侧留白更多，用非对称留白呼应原图构图。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

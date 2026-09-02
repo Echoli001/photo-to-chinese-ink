@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "flower_field",
+  "dominant_subject": "flower_field",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "high",
+    "line": "high",
+    "plane": "medium",
+    "note": "紫红色蓟花花头在画面中大量重复散布，是主要节奏节点，点依赖高；密集丛生、高低错落的茎秆构成强烈的竖向方向骨架，线依赖高；天空云团与远景草地各自形成大面积色块，面依赖中等。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "平视偏仰视",
+  "light_condition": "白天，晴天，阳光明媚",
+  "color_tendency": "蓝天白云的冷色背景与紫红色蓟花、绿色茎秆、地被黄花的暖色对比强烈",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "natural",
+    "achromatic_base": ["云白"],
+    "dominant_chromatic_family": ["紫红"],
+    "secondary_chromatic_family": ["天蓝"],
+    "accent_hues": ["草地黄花点缀"],
+    "chromatic_carrier": "point",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "mixed",
+    "rhythm_profile": ["蓟花茎秆高低错落的重复竖线节奏", "花头分布疏密不均的点阵", "云朵团块的横向节奏"],
+    "valuable_invariants": ["天地两分的构图（云天占上半，草地占下半）", "茎秆丛生向上的方向骨架", "远景地平线暗示的空间纵深"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影空间层次"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.35,
+    "detail_deletion_target": 0.68,
+    "allowed_changes": ["茎秆简化为疏密不一的骨线丛", "花头压缩为彩点/墨点节奏，不逐朵描绘", "云团块压平为留白或淡墨块，弱化写实光影"],
+    "forbidden_changes": ["精确复制云朵的写实光影层次", "逐片描绘每根茎秆上的叶刺细节"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["方向反拍", "疏密突变"],
+    "note": "多数茎秆向上生长，插入一两笔逆向/倾斜的茎秆制造方向反拍；茎秆与花头分布疏密不均，近景密、远景疏，形成疏密突变。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

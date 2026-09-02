@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "mountain_snow",
+  "dominant_subject": "mountain_snow",
+  "secondary_subjects": ["river_lake_reflection"],
+  "point_line_plane_dependency": {
+    "point": "low",
+    "line": "high",
+    "plane": "high",
+    "note": "画面中唯一的孤立节奏节点是前景的观景人物，点依赖低；主峰的尖锐山脊线与两侧岩壁轮廓线构成强烈的方向骨架，湖面倒影把这条线又重复了一遍，线依赖高；雪峰、岩壁、湖水构成的大面积色块主导画面，面依赖高。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "平视",
+  "light_condition": "白天，晴天",
+  "color_tendency": "雪峰洁白、岩壁灰褐、天空与湖水呈统一的浅蓝色调，色调整体清冷通透",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["雪白主峰"],
+    "dominant_chromatic_family": ["浅蓝"],
+    "secondary_chromatic_family": ["灰褐岩壁"],
+    "accent_hues": ["人物衣着暗红"],
+    "chromatic_carrier": "plane",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "medium",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "line",
+    "rhythm_profile": ["主峰尖峰轮廓在湖面倒影中重复一次，形成上下对称节奏"],
+    "valuable_invariants": ["主峰尖锐的三角形轮廓", "湖面倒影制造的上下镜像对称构图", "观景人物作为唯一的具象叙事锚点，位于画面前景一角", "岩壁与雪峰前后叠层的空间关系"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的空间透视和岩石材质细节"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.45,
+    "detail_deletion_target": 0.6,
+    "allowed_changes": ["岩壁概括为几层浓淡不同的墨色块，不逐处描绘岩体纹理", "雪峰保留尖锐轮廓但简化内部明暗层次", "湖面倒影用简练墨线暗示而非精确复制"],
+    "forbidden_changes": ["改变主峰的尖锐轮廓形态", "精确复制湖面倒影为对称镜像", "移动观景人物在画面中的位置"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["非对称留白", "断裂"],
+    "note": "湖面大面积留白集中在画面下方，与上方山体形成不对称重心，用非对称留白强化画面的空灵感；岩壁轮廓线在局部做断裂处理，避免机械描摹连续边缘。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

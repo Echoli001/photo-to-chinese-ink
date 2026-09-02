@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "forest_bamboo",
+  "dominant_subject": "forest_bamboo",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "low",
+    "line": "high",
+    "plane": "medium",
+    "note": "画面没有孤立的焦点式锚点，点依赖低；密集竹竿自下而上贯穿整个画面，是最核心的竖向方向骨架，线依赖高；逆光形成的明暗竹叶团块与背景发光雾气团块构成主形块，面依赖中等。"
+  },
+  "negative_space_ratio": "low",
+  "perspective": "平视",
+  "light_condition": "逆光，晨雾/水汽弥漫",
+  "color_tendency": "逆光下竹竿呈深色剪影，背景高光处泛白泛金，整体为绿色调中带有强烈明暗对比",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "natural",
+    "achromatic_base": ["逆光剪影墨黑"],
+    "dominant_chromatic_family": ["墨绿"],
+    "secondary_chromatic_family": ["嫩绿"],
+    "accent_hues": ["逆光高光泛金"],
+    "chromatic_carrier": "line",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "line",
+    "rhythm_profile": ["密集竹竿竖向排列的重复节奏", "逆光竹叶团块疏密交错的节奏"],
+    "valuable_invariants": ["竹竿竖向贯穿画面的方向骨架", "逆光剪影与背景发光雾气的强烈明暗对比", "竹叶团块前后叠压的空间层次"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的逆光光晕与写实质感"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.35,
+    "detail_deletion_target": 0.68,
+    "allowed_changes": ["密集竹竿概括为疏密不一的竖向骨线丛，不逐根描绘", "逆光竹叶团块简化为墨块/彩点群", "背景雾气高光压平为大面积留白"],
+    "forbidden_changes": ["精确复制逆光光晕的写实光效", "逐节描绘竹竿的竹节纹理"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["删线", "疏密突变"],
+    "note": "过密的竹竿线条择要删减，保留主要几组骨线制造呼吸感；竹竿与竹叶团块从画面两侧向中央发光处逐渐稀疏，形成疏密突变的纵深节奏。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

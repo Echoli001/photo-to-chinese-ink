@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "vector_illustration",
+  "subject_category": "abstract_line_network",
+  "dominant_subject": "abstract_line_network",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "low",
+    "line": "high",
+    "plane": "low",
+    "note": "画面没有独立的点状元素，点依赖低；数十条自左下角向右上放射发散的蓝色光线束是画面唯一且绝对主导的结构，线依赖高；纯黑背景不构成实体形块，只作为负空间存在，面依赖低。"
+  },
+  "negative_space_ratio": "high",
+  "perspective": "已经是抽象平面构成（无明确透视）",
+  "light_condition": "不适用",
+  "color_tendency": "纯黑背景上放射状线条呈蓝紫到青绿的渐变色，线条头部亮青绿、尾部渐暗至深蓝",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["纯黑背景"],
+    "dominant_chromatic_family": ["蓝紫"],
+    "secondary_chromatic_family": ["青绿"],
+    "accent_hues": [],
+    "chromatic_carrier": "line",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "C",
+  "structural_complexity": "medium",
+  "source_style_reading": {
+    "source_abstraction_level": "high",
+    "existing_visual_language": ["矢量渐变发散线条已是成熟的点线面抽象构成，非摄影素材"],
+    "primary_information_carrier": "line",
+    "rhythm_profile": ["线条从同一发散中心向外辐射的方向节奏", "线条长短不一形成的疏密变化"],
+    "valuable_invariants": ["放射发散的整体密度地图", "线条方向从中心向外的一致性冲突关系", "画面左下密集、右上稀疏的疏密梯度"],
+    "missing_quality": []
+  },
+  "transformation_policy": {
+    "intervention_level": "low",
+    "topology_preservation_target": 0.8,
+    "detail_deletion_target": 0.2,
+    "allowed_changes": ["把矢量光线束翻译为枯湿浓淡不同的墨线，不逐线精确复制", "线条渐变色转译为水痕感的色彩过渡"],
+    "forbidden_changes": ["改变放射发散的整体方向结构", "重新构图或大幅改动线条密度分布"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["删线", "粗细对撞"],
+    "note": "对局部过于密集的弱势线条做删线处理，避免逐条照抄；保留线条本身的粗细渐变并适度强化对撞感，呼应原矢量图头部粗尾部细的形态。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

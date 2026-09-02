@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "vector_illustration",
+  "subject_category": "abstract_line_network",
+  "dominant_subject": "abstract_line_network",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "low",
+    "line": "high",
+    "plane": "medium",
+    "note": "画面没有独立的点状元素，点依赖低；密布全幅的灰蓝流线沿涡旋方向排列，是画面绝对主导的结构，线依赖高；线条整体密度在右下角形成一个漩涡状的浅色团块，构成隐约的面感，面依赖中等。"
+  },
+  "negative_space_ratio": "low",
+  "perspective": "已经是抽象平面构成（无明确透视）",
+  "light_condition": "不适用",
+  "color_tendency": "整体呈灰蓝到白的单一冷色调渐变，无强烈色彩对比，靠明暗层次区分线条前后关系",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["灰白", "灰蓝"],
+    "dominant_chromatic_family": ["灰蓝"],
+    "secondary_chromatic_family": ["浅灰白"],
+    "accent_hues": [],
+    "chromatic_carrier": "line",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "C",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "high",
+    "existing_visual_language": ["密集流线矢量纹理已是成熟的线性抽象构成，非摄影素材"],
+    "primary_information_carrier": "line",
+    "rhythm_profile": ["流线沿涡旋方向连续弯曲的节奏", "线条密度从画面边缘向右下涡旋中心的渐变"],
+    "valuable_invariants": ["整体涡旋方向的密度地图", "线条弯曲方向的连续一致性", "右下角涡旋中心与左上直线区域的对比关系"],
+    "missing_quality": []
+  },
+  "transformation_policy": {
+    "intervention_level": "low",
+    "topology_preservation_target": 0.85,
+    "detail_deletion_target": 0.15,
+    "allowed_changes": ["把矢量流线翻译为枯湿浓淡不同的墨线，不逐线精确复制", "涡旋区域可用淡墨晕染强化团块感"],
+    "forbidden_changes": ["改变整体涡旋弯曲的方向结构", "重新构图或大幅改动线条密度分布"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["删线", "断裂"],
+    "note": "对局部过密的弱势线条做删线处理，只删10%-30%弱线，以笔性翻译为主，不逐线复制；部分长线做断裂处理，避免线条过于连续机械。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

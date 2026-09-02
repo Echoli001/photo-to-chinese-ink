@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "forest_bamboo",
+  "dominant_subject": "forest_bamboo",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "medium",
+    "line": "high",
+    "plane": "high",
+    "note": "注：本图实为秋季白桦/针叶混交林，非典型竹林，按 manifest.md 说明保留在 forest_bamboo 类目下作为边界测试样本。金黄树冠簇与暗色针叶树冠交替重复，点依赖中等；大量竖直白桦树干密布画面，方向骨架极强，线依赖高；满山坡的树冠整体构成密实的纹理化大面块，面依赖高。"
+  },
+  "negative_space_ratio": "low",
+  "perspective": "平视偏俯",
+  "light_condition": "白天，秋季，侧逆光",
+  "color_tendency": "金黄色白桦落叶与深绿/墨黑针叶树形成强烈的冷暖及明暗对比，整体呈重复的斑驳纹理",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "natural",
+    "achromatic_base": ["树影墨黑"],
+    "dominant_chromatic_family": ["金黄"],
+    "secondary_chromatic_family": ["墨绿"],
+    "accent_hues": ["白桦树干灰白"],
+    "chromatic_carrier": "line",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "mixed",
+    "rhythm_profile": ["金黄与墨绿树冠交替出现的重复纹理节奏", "白桦树干竖向排列的密集线性节奏"],
+    "valuable_invariants": ["满山坡密布树木形成的整体纹理感", "金黄与深绿色块交错的马赛克式分布", "无明确视觉中心、依靠重复单元支撑画面"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的写实纹理与色彩细节"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.3,
+    "detail_deletion_target": 0.72,
+    "allowed_changes": ["密集树冠简化为色块化的重复纹理节奏，不逐棵描绘", "白桦树干概括为疏密不一的竖向骨线丛", "整体压缩为金黄与墨绿两大色块的交错节奏"],
+    "forbidden_changes": ["逐棵精确描绘树冠轮廓", "精确复制每根树干的写实质感"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["疏密突变", "错位"],
+    "note": "金黄与墨绿树冠色块交替处用疏密突变强化节奏感；部分白桦竖线与周围色块轮廓故意错位，避免过于规整的网格感，呼应满山坡树木自然生长的不规则性。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

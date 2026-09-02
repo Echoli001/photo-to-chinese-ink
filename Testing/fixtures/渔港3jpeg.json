@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "fishing_port",
+  "dominant_subject": "fishing_port",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "medium",
+    "line": "high",
+    "plane": "medium",
+    "note": "红旗、船舷灯、船头装饰是零星节奏节点，点依赖中等；成排渔船的桅杆、缆绳、船身边缘构成密集平行竖线与斜线，是画面骨干，线依赖高；金色海面反光大平面与远处树林剪影带构成主形块，面依赖中等。"
+  },
+  "negative_space_ratio": "low",
+  "perspective": "平视偏俯",
+  "light_condition": "夜晚",
+  "color_tendency": "落日金橙色主导天空与海面反光，渔船整体呈深褐/黑色剪影，局部红旗、船体红绿装饰点缀",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["深褐剪影", "墨黑船身"],
+    "dominant_chromatic_family": ["金橙"],
+    "secondary_chromatic_family": ["浅金黄海面"],
+    "accent_hues": ["船头红旗", "船身红绿装饰"],
+    "chromatic_carrier": "plane",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "line",
+    "rhythm_profile": ["成排桅杆与缆绳的密集竖线节奏", "船身依次排开的斜向纵深节奏"],
+    "valuable_invariants": ["渔船紧密并排停靠的整体队列结构", "金色海面反光贯穿画面的主势线", "远处树林剪影作为地平线参照"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的写实光影与材质细节"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.4,
+    "detail_deletion_target": 0.65,
+    "allowed_changes": ["渔船群概括为墨色剪影团块，不逐船描绘细节", "桅杆缆绳简化为疏密不均的墨线束", "海面反光压平为大面积暖色平涂"],
+    "forbidden_changes": ["逐船精确描绘船体结构与旗帜文字", "精确复制海面写实波光纹理"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["疏密突变", "方向反拍"],
+    "note": "桅杆缆绳线密度从近景向远景递减，用疏密突变强化纵深；部分缆绳斜线方向与船身主轴形成反差，用方向反拍制造节奏对抗。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

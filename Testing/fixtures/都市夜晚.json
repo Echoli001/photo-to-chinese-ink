@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "urban_night",
+  "dominant_subject": "urban_night",
+  "secondary_subjects": ["river_lake_reflection"],
+  "point_line_plane_dependency": {
+    "point": "high",
+    "line": "high",
+    "plane": "medium",
+    "note": "楼体窗格灯光与霓虹广告牌是密集重复节奏节点，水中倒影把这套点阵重复了一遍，点依赖高；摩天楼的竖直边缘线群构成画面骨干，线依赖高；深蓝夜空与静水倒影的大面积平面承载整体基调，面依赖中等。"
+  },
+  "negative_space_ratio": "low",
+  "perspective": "平视",
+  "light_condition": "夜晚",
+  "color_tendency": "整体冷蓝调主导，楼体霓虹以白光、蓝光为主，局部红色数字广告牌形成小面积暖色点缀",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["墨蓝夜空"],
+    "dominant_chromatic_family": ["冷蓝"],
+    "secondary_chromatic_family": ["白光"],
+    "accent_hues": ["红色数字广告牌"],
+    "chromatic_carrier": "point",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "point",
+    "rhythm_profile": ["楼体窗格灯光的密集点阵网格", "水面倒影重复同一组点阵，形成镜像纵深"],
+    "valuable_invariants": ["多栋摩天楼并立的整体天际线构图", "水面倒影制造的上下对称性", "楼群高低错落的轮廓节奏"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的空间透视和材质细节"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.4,
+    "detail_deletion_target": 0.65,
+    "allowed_changes": ["楼体窗格灯光转为彩点/墨点节奏，不逐格描绘", "楼体轮廓概括为几组竖直墨块，弱化写实建筑细节", "水面倒影用简练墨线与色点重新谱写，不逐一复制楼体轮廓"],
+    "forbidden_changes": ["逐格精确描绘窗户排列与广告牌文字", "精确复制水面倒影为对称镜像"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["彩点脱轨", "疏密突变"],
+    "note": "楼体灯光点位不追求精确复刻原图坐标，用彩点脱轨制造自然错落感；灯光密度从楼群中心向边缘递减，用疏密突变强化天际线的节奏起伏。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

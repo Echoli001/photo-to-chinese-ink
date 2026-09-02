@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "forest_bamboo",
+  "dominant_subject": "forest_bamboo",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "medium",
+    "line": "high",
+    "plane": "low",
+    "note": "雨后竹叶上的水珠是密集重复的细小节奏点，点依赖中等；竹竿竖向贯穿与下垂竹叶枝条的斜线交织，是主要方向骨架，线依赖高；背景为均匀虚化的深色，没有明显的独立面块，面依赖低。"
+  },
+  "negative_space_ratio": "low",
+  "perspective": "平视",
+  "light_condition": "阴天/雨后，柔和漫射光",
+  "color_tendency": "整体绿色调统一，竹竿与竹叶明暗层次丰富，背景深色虚化衬托前景水珠反光",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "natural",
+    "achromatic_base": [],
+    "dominant_chromatic_family": ["墨绿"],
+    "secondary_chromatic_family": ["嫩绿"],
+    "accent_hues": ["水珠高光"],
+    "chromatic_carrier": "point",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "medium",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "line",
+    "rhythm_profile": ["下垂竹叶枝条自上而下悬垂的重复节奏", "竹竿竖线与斜垂枝叶交织的节奏"],
+    "valuable_invariants": ["竹竿竖向骨架与下垂竹叶的方向对比", "水珠点缀带来的细节焦点", "深色虚化背景衬托前景的空间层次"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的水珠光泽与写实质感"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.4,
+    "detail_deletion_target": 0.65,
+    "allowed_changes": ["下垂竹叶枝条简化为几组骨线，不逐叶描绘", "水珠简化为零星彩点/墨点，不追求逐颗精确位置", "深色背景压平为均匀墨底"],
+    "forbidden_changes": ["逐颗精确复制水珠的光学反光", "逐叶勾勒竹叶的锯齿边缘细节"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["方向反拍", "偶发笔触"],
+    "note": "竹竿以竖向为主，下垂竹叶枝条形成的斜向/横向线条与之形成方向反拍；水珠及叶片不规则弯曲处用偶发笔触表现自然垂坠与湿润感。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

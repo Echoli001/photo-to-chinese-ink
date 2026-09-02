@@ -1,0 +1,56 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "urban_night",
+  "dominant_subject": "urban_night",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "high",
+    "line": "medium",
+    "plane": "high",
+    "note": "航拍视角下城市万家灯火铺满整个画面，是极密集的重复节奏节点，点依赖高；远处高楼群轮廓构成一条水平方向骨架线，线依赖中等；大面积粉紫色晚霞天空与深色城市灯海平面构成两大主形块，面依赖高。"
+  },
+  "negative_space_ratio": "low",
+  "perspective": "俯视",
+  "light_condition": "夜晚",
+  "color_tendency": "粉紫、橙金晚霞天空与深色城市灯海形成对比，灯光整体呈暖橙黄色调",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["深灰城市剪影"],
+    "dominant_chromatic_family": ["暖橙黄灯海"],
+    "secondary_chromatic_family": ["粉紫晚霞"],
+    "accent_hues": ["天际线高楼灯光"],
+    "chromatic_carrier": "point",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "point",
+    "rhythm_profile": ["城市灯光铺满全城的密集点阵，密度从画面中心向四周递减", "远处高楼灯光形成一条更亮的天际线光带"],
+    "valuable_invariants": ["俯视视角下整座城市被压平为一个发光大平面", "灯光密度从近景到远景的整体分布规律", "天空与灯海各占画面近一半的构图比例"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的航拍空间透视"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.35,
+    "detail_deletion_target": 0.7,
+    "allowed_changes": ["城市灯光简化为密度不均的彩点/墨点群，不逐栋描绘建筑", "灯海整体压平为大面积暖色平涂，弱化写实建筑轮廓", "晚霞天空概括为几层浓淡渐变的色块晕染"],
+    "forbidden_changes": ["逐栋精确描绘建筑轮廓与灯光排列", "精确复制晚霞云层的写实光影细节"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["彩点脱轨", "疏密突变"],
+    "note": "城市灯光点位不追求精确复刻原图坐标，用彩点脱轨制造自然错落感；灯光密度从画面中心天际线向四周郊区递减，用疏密突变强化俯视纵深的层次节奏。"
+  },
+  "plane_composition": {
+    "activation_reason": "aerial_view",
+    "subject_route": "aerial_village"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

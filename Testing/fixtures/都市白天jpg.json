@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "urban_day",
+  "dominant_subject": "urban_day",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "medium",
+    "line": "high",
+    "plane": "high",
+    "note": "沿江密集排列的中低层住宅窗户是次要节奏节点，点依赖中等；成群摩天楼的竖直边缘线与滨江绿化带、护栏构成的水平线共同构成骨架，线依赖高；蓝天、江面和楼群构成的大色块主导画面，面依赖高。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "平视",
+  "light_condition": "白天，晴天",
+  "color_tendency": "蓝天白云与蓝色江面统一冷色基调，玻璃幕墙楼体呈灰蓝、银白，滨江建筑局部暖褐色点缀",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["银白幕墙", "灰白云"],
+    "dominant_chromatic_family": ["天蓝"],
+    "secondary_chromatic_family": ["灰蓝楼体"],
+    "accent_hues": ["滨江建筑暖褐屋顶"],
+    "chromatic_carrier": "plane",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "mixed",
+    "rhythm_profile": ["高低错落的楼群天际线节奏", "沿江建筑窗户的密集横向排列节奏"],
+    "valuable_invariants": ["高楼与低层建筑前后叠层的整体天际线构图", "江面与滨江绿化带作为画面基座的水平分层", "楼群高低错落形成的视觉焦点"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的空间透视和建筑材质细节"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.45,
+    "detail_deletion_target": 0.6,
+    "allowed_changes": ["楼群概括为几组高低错落的墨色/彩色块，不逐栋描绘立面", "沿江建筑窗户简化为疏密点阵", "江面与绿化带压平为色块，弱化写实反光与树木细节"],
+    "forbidden_changes": ["逐栋精确描绘楼体结构与幕墙细节", "精确复制江面的写实波光"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["并形", "疏密突变"],
+    "note": "相邻低层住宅楼并形处理为一组连续色块，不逐栋分割；楼群高度从画面中心向两侧递减，用疏密突变强化天际线的起伏节奏。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

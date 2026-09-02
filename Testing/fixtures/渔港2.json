@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "fishing_port",
+  "dominant_subject": "fishing_port",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "high",
+    "line": "high",
+    "plane": "medium",
+    "note": "水中渔船与养殖竹竿排的剪影反复出现，是密集的节奏节点，点依赖高；成排的养殖竹竿呈网格状横向排列，加上远山轮廓线，方向骨架非常清晰，线依赖高；晚霞天空与反光水面构成大面积暖色平面，面依赖中等。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "平视偏俯",
+  "light_condition": "黄昏，日落，逆光",
+  "color_tendency": "整体被晚霞染成统一的橙红色调，渔船与养殖竹竿呈深色剪影，冷暖对比集中在天空与剪影之间",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["渔船深色剪影"],
+    "dominant_chromatic_family": ["橙红"],
+    "secondary_chromatic_family": ["深紫远山"],
+    "accent_hues": [],
+    "chromatic_carrier": "plane",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "line",
+    "rhythm_profile": ["养殖竹竿成排横向排列的网格状重复节奏", "渔船剪影散布水面的点阵"],
+    "valuable_invariants": ["远山剪影作为画面上部的方向骨架", "养殖竹竿网格与渔船剪影的前后层次", "晚霞天空占据画面上半部的构图"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的晚霞渐变光影细节"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.4,
+    "detail_deletion_target": 0.65,
+    "allowed_changes": ["养殖竹竿简化为疏密不一的细线阵，不逐根描绘", "渔船剪影概括为墨块，不描绘船体细节", "晚霞天空压平为大面积暖色渲染或留白"],
+    "forbidden_changes": ["逐根精确复制养殖竹竿的排列坐标", "精确复制晚霞的渐变光影层次"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["断裂", "疏密突变"],
+    "note": "成排养殖竹竿的线阵在若干处故意断裂，避免过于规整机械的网格感；竹竿排与渔船剪影从近景向远景密度递减，形成疏密突变的纵深节奏。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

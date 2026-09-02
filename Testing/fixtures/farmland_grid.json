@@ -1,0 +1,56 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "farmland_grid",
+  "dominant_subject": "farmland_grid",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "low",
+    "line": "high",
+    "plane": "high",
+    "note": "远景风力发电机与零星村落是稀疏节奏节点，点依赖低；田埂、土路和地块边界构成密集的网格状方向线，线依赖高；不同色相、不同作物的农田拼接色块铺满整个画面，是绝对主导的主形块，面依赖高。"
+  },
+  "negative_space_ratio": "low",
+  "perspective": "俯视",
+  "light_condition": "白天，晴天",
+  "color_tendency": "农田呈金黄、赭红、深绿、墨绿等多色拼接，整体在暖阳斜射下偏暖金色调",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": [],
+    "dominant_chromatic_family": ["金黄", "赭红"],
+    "secondary_chromatic_family": ["深绿", "墨绿"],
+    "accent_hues": ["土路浅褐"],
+    "chromatic_carrier": "plane",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "medium",
+    "existing_visual_language": ["不规则色块拼接已接近抽象色域构成"],
+    "primary_information_carrier": "plane",
+    "rhythm_profile": ["不同色相地块以不规则多边形拼接铺满画面的色块节奏", "田埂细线切割色块形成的网格节奏"],
+    "valuable_invariants": ["俯视视角下整片农田被压平为一个大平面", "地块色彩拼接的整体色域分布与密度", "土路蜿蜒穿插地块之间的方向线", "远景风力发电机与村落作为地平线参照"],
+    "missing_quality": ["色块边界仍是精确的写实地块轮廓，尚未做形块提炼与破形处理"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.35,
+    "detail_deletion_target": 0.7,
+    "allowed_changes": ["地块拼接概括为若干大色块，不逐块精确复制边界形状", "田埂线简化为疏密不均的墨线网格", "远景风力发电机与村落概括为简练墨点/短线标记"],
+    "forbidden_changes": ["逐块精确复制地块的写实边界坐标", "精确还原每块农田的作物纹理细节"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["并形", "彩点脱轨"],
+    "note": "相邻同色系地块并形处理为更大色块，减少琐碎分割；地块边界形状不追求精确复刻原图坐标，用彩点脱轨制造自然的手绘错落感。"
+  },
+  "plane_composition": {
+    "activation_reason": "aerial_view",
+    "subject_route": "seedling_field"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

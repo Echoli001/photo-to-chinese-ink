@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "jiangnan_water_town",
+  "dominant_subject": "jiangnan_water_town",
+  "secondary_subjects": ["river_lake_reflection"],
+  "point_line_plane_dependency": {
+    "point": "medium",
+    "line": "high",
+    "plane": "high",
+    "note": "成排悬挂的红灯笼及其水中倒影是重复节奏节点，点依赖中等；建筑坡屋顶檐口线、石阶石桥的边线、驳岸线条层层叠加，方向骨架清晰，线依赖高；大面积白墙、灰瓦屋顶、平静水面倒影各自构成主形块，面依赖高。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "平视",
+  "light_condition": "白天，傍晚暖光",
+  "color_tendency": "白墙灰瓦为主基调，红灯笼作暖色点缀，水中倒影复现建筑与灯笼色彩，冷暖对比柔和",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["白墙", "灰瓦"],
+    "dominant_chromatic_family": ["灰白"],
+    "secondary_chromatic_family": ["赭石木色"],
+    "accent_hues": ["灯笼朱红"],
+    "chromatic_carrier": "point",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "mixed",
+    "rhythm_profile": ["成排红灯笼的重复点阵", "水面倒影重复同一组建筑与灯笼", "坡屋顶檐口起伏的线性节奏"],
+    "valuable_invariants": ["白墙黛瓦沿河而立的构图", "石桥石阶引导视线入画的透视", "水面倒影带来的镜像空间层次"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的空间透视和材质细节"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.4,
+    "detail_deletion_target": 0.65,
+    "allowed_changes": ["屋顶墨团化，并屋成团", "成排灯笼转为彩点节奏，不逐个精确描绘", "水面倒影用倒斜墨块与波动水线重新谱写，不逐一复制建筑轮廓"],
+    "forbidden_changes": ["逐块精确复制白墙的斑驳质感", "精确复制水面倒影为对称镜像"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["彩点脱轨", "非对称留白"],
+    "note": "红灯笼在水中的倒影不精确镜像对称，用彩点脱轨制造错位跳跃感；画面留白偏向右侧水面与天空一角，不居中对称，呼应原图构图重心偏左的建筑群。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

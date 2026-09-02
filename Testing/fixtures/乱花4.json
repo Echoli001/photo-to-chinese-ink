@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "flower_branch",
+  "dominant_subject": "flower_branch",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "medium",
+    "line": "high",
+    "plane": "medium",
+    "note": "花穗上的细小花朵连成串，更多读作线而非离散的点，点依赖中等；大量下垂花穗与藤蔓构成密集的方向骨架，线依赖高；穿插的叶片合并成大小不一的绿色面块，面依赖中等。"
+  },
+  "negative_space_ratio": "low",
+  "perspective": "平视",
+  "light_condition": "白天，柔和自然光",
+  "color_tendency": "整体绿色调为主，浅黄绿花穗与深绿叶片对比柔和，色彩统一",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "natural",
+    "achromatic_base": [],
+    "dominant_chromatic_family": ["黄绿"],
+    "secondary_chromatic_family": ["深绿"],
+    "accent_hues": [],
+    "chromatic_carrier": "line",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "line",
+    "rhythm_profile": ["下垂花穗成排悬挂的重复线性节奏", "叶片穿插形成的疏密变化"],
+    "valuable_invariants": ["花穗自上而下悬垂的方向骨架", "攀爬围栏形成的纵向支撑结构", "叶片与花穗前后叠压的空间层次"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影质感与色彩细节"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.35,
+    "detail_deletion_target": 0.65,
+    "allowed_changes": ["下垂花穗简化为一组下垂骨线，不逐穗描绘每颗小花", "叶片合并为墨面块，弱化叶脉细节", "围栏结构简化或部分隐去，仅保留暗示"],
+    "forbidden_changes": ["逐颗描绘花穗上的细小花朵", "精确复制围栏的金属结构细节"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["删线", "偶发笔触"],
+    "note": "过密的下垂花穗线条择要删减，保留主要几组下垂骨线而非逐一描绘；花穗末端不规则弯曲处用偶发笔触表现自然垂坠感。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

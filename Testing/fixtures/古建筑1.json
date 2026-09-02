@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "ancient_architecture",
+  "dominant_subject": "ancient_architecture",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "medium",
+    "line": "high",
+    "plane": "medium",
+    "note": "角楼屋脊上的脊兽、宝顶等装饰细节是次要节奏节点，点依赖中等；多层庑殿顶的檐口轮廓、灰瓦屋脊曲线层层叠加，方向骨架密集，线依赖高；红墙金瓦的大色块与前景灰瓦屋顶剪影构成主形块，面依赖中等。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "仰视",
+  "light_condition": "白天，晴天，顺光",
+  "color_tendency": "蓝天冷色背景与红墙金瓦的暖色形成强烈对比，前景灰瓦屋顶剪影作为中性过渡",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "natural",
+    "achromatic_base": ["灰瓦"],
+    "dominant_chromatic_family": ["金黄"],
+    "secondary_chromatic_family": ["朱红"],
+    "accent_hues": ["天蓝"],
+    "chromatic_carrier": "plane",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "high",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "line",
+    "rhythm_profile": ["多层庑殿顶檐口的重复叠加节奏", "前景灰瓦屋顶曲线的连续起伏"],
+    "valuable_invariants": ["角楼多层收束的塔状轮廓", "前景灰瓦屋顶与后景金瓦角楼的前后层次", "蓝天负形背景"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的建筑细节与材质质感"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.4,
+    "detail_deletion_target": 0.65,
+    "allowed_changes": ["脊兽装饰简化为重复墨点/彩点节奏", "多层檐口概括为几条主要骨线", "前景灰瓦屋顶压平为大面积墨面块，弱化瓦片纹理"],
+    "forbidden_changes": ["逐片描绘瓦当纹样", "精确复制脊兽雕刻细节"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["粗细对撞", "疏密突变"],
+    "note": "多层檐口骨线用粗细对撞表现远近虚实；前景灰瓦屋顶密集、后景角楼相对疏朗，形成疏密突变的纵深节奏。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "river_lake_reflection",
+  "dominant_subject": "river_lake_reflection",
+  "secondary_subjects": ["mountain_snow"],
+  "point_line_plane_dependency": {
+    "point": "low",
+    "line": "medium",
+    "plane": "high",
+    "note": "画面几乎没有密集重复的节奏节点，仅太阳和远处小船算孤立点，点依赖低；喀斯特山峰的起伏轮廓线与江面延展的方向线构成骨架，线依赖中等；大面积橙色天空、层叠山体剪影块与江面反光平面主导画面，面依赖高。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "平视",
+  "light_condition": "夜晚",
+  "color_tendency": "落日橙红色统一天空与江面，喀斯特山峰呈由近及远逐渐变浅的灰蓝剪影层次",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "mixed",
+    "achromatic_base": ["灰蓝远山"],
+    "dominant_chromatic_family": ["橙红"],
+    "secondary_chromatic_family": ["灰蓝山影"],
+    "accent_hues": ["太阳高亮白"],
+    "chromatic_carrier": "plane",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "medium",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "plane",
+    "rhythm_profile": ["喀斯特山峰由近及远逐层变浅的层次节奏"],
+    "valuable_invariants": ["群峰起伏的整体轮廓线", "江面居中贯穿画面的构图", "太阳与山峰在画面中轴线上的对位关系", "江面倒影制造的纵向对称性"],
+    "missing_quality": ["缺乏点线面提炼，仍是完整摄影的空间透视和写实光影层次"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.45,
+    "detail_deletion_target": 0.6,
+    "allowed_changes": ["群峰概括为几层浓淡不同的墨色剪影块，不逐峰描绘岩体纹理", "江面倒影用简练墨线暗示而非精确镜像", "小船概括为一个简练墨点/短线标记"],
+    "forbidden_changes": ["逐峰精确描绘山体轮廓细节", "精确复制江面倒影为对称镜像", "改变太阳与主峰的相对位置关系"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["疏密突变", "非对称留白"],
+    "note": "群峰墨色浓淡从近景向远景递减，用疏密突变表现纵深层次；天空留白偏上方、江面留白偏下方，不做居中对称处理，用非对称留白呼应原图构图重心。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

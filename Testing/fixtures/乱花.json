@@ -1,0 +1,52 @@
+{
+  "input_type": "photo",
+  "image_medium": "real_photo",
+  "subject_category": "flower_branch",
+  "dominant_subject": "flower_branch",
+  "secondary_subjects": [],
+  "point_line_plane_dependency": {
+    "point": "high",
+    "line": "medium",
+    "plane": "medium",
+    "note": "前景两朵清晰玉兰花苞是主要语义锚点，背景大量虚化的粉色花苞重复出现形成密集点阵节奏，点依赖高；枝干交叉形成方向骨架，但数量不多，线依赖中等；蓝天负形与虚化花团块构成大面积柔和色块，面依赖中等。"
+  },
+  "negative_space_ratio": "medium",
+  "perspective": "仰视",
+  "light_condition": "白天，晴天，顺光",
+  "color_tendency": "蓝天冷色背景与粉紫色玉兰花苞暖色对比，前景清晰、背景大面积虚化形成柔和的色彩层次",
+  "color_route": {
+    "palette_mode": "unknown",
+    "material_color_mode": "natural",
+    "achromatic_base": [],
+    "dominant_chromatic_family": ["粉紫"],
+    "secondary_chromatic_family": ["天蓝"],
+    "accent_hues": ["花瓣内侧浅白"],
+    "chromatic_carrier": "point",
+    "transparent_to_opaque_balance": "unknown",
+    "high_chroma_coverage_cap": "unknown",
+    "painted_color_coverage_cap": "unknown",
+    "forbidden_recent_palette": []
+  },
+  "target_abstraction_tier": "B",
+  "structural_complexity": "medium",
+  "source_style_reading": {
+    "source_abstraction_level": "low",
+    "existing_visual_language": [],
+    "primary_information_carrier": "point",
+    "rhythm_profile": ["前景两朵花苞的对称呼应", "背景大量虚化花朵的重复点阵", "枝干交叉的线性节奏"],
+    "valuable_invariants": ["前景两朵花苞的清晰焦点锚点", "枝干交叉构图", "蓝天负形背景"],
+    "missing_quality": ["景深虚化产生的写实摄影层次，需要转化为点阵墨韵而非光学虚化"]
+  },
+  "transformation_policy": {
+    "intervention_level": "high",
+    "topology_preservation_target": 0.35,
+    "detail_deletion_target": 0.7,
+    "allowed_changes": ["背景大量虚化花苞简化为重复墨点/彩点节奏", "枝干转为粗细变化的骨线", "蓝天负形整体压平为淡墨底或留白"],
+    "forbidden_changes": ["精确复制虚化光斑的光学效果", "逐瓣描绘每朵花的花瓣细节"]
+  },
+  "ink_symbol_composition": {
+    "selected_deformation_techniques": ["彩点脱轨", "疏密突变"],
+    "note": "背景大量虚化的粉色花苞用彩点脱轨表现，不追求光学虚化的精确位置；前景清晰花苞与背景密集虚化点阵之间形成疏密突变，强化前后景层次。"
+  },
+  "unknown_fields": ["color_route.palette_mode", "color_route.transparent_to_opaque_balance", "color_route.high_chroma_coverage_cap", "color_route.painted_color_coverage_cap"]
+}

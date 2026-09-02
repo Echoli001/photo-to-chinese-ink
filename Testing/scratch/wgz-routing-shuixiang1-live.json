@@ -1,0 +1,20 @@
+{
+  "status": "ok",
+  "subject_category": "jiangnan_water_town",
+  "label": "江南 白墙黑瓦",
+  "main_route": {
+    "ink_block_handling": "浓淡屋顶墨团化——相邻屋顶'并屋成团'合并为整体墨团，不逐片描绘单片屋脊瓦片；水面先水后墨分层，墨彩/油彩局部叠置",
+    "negative_space_ratio": "偏高（约 55%-75%，取一般留白基线）——白墙作为主要负形留白载体，是该类目留白的主要来源",
+    "texture_method": "焦干立骨表现屋脊/檐口结构转折，破墨（每张图限 1-3 处）用于墙面阴影/水面交界处制造变化"
+  },
+  "aux_route": {
+    "ink_block_handling": "若画面同时有水面倒影，追加 river_lake_reflection 主路线的倒斜墨块+波动水线处理",
+    "negative_space_ratio": "同主路线，约 55%-75%",
+    "texture_method": "波动水线+破局线点（倒影部分）"
+  },
+  "rejected_routes": [
+    "逐片描绘可辨的屋脊/飞檐/三角坡面（v17 §3.16B 明确：即使边缘已湿润，逐片可辨仍是'具象建筑+水墨滤镜'层级，未达到屋顶群整体墨团化的抽象层级）",
+    "用米黄仿古纸等题材惯例自动触发的纸色（05-quality-checklist.md 已列为硬性禁止项）"
+  ],
+  "point_line_plane": "12/32/56*"
+}
