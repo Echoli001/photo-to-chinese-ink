@@ -6,13 +6,17 @@ description: >
   description, into a Wu Guanzhong (吴冠中)-style modern ink-wash art prompt
   — structured as a diagnosis card, a routing decision, and a final compiled
   text prompt ready to paste into an external image generator (Midjourney,
-  即梦, etc.). This skill does NOT call any image-generation API itself; it
-  only produces text. Use this skill whenever the user asks to turn a photo
-  into "吴冠中风格"、"水墨风格"、"国画风格"、ink-wash art, or Chinese modern
-  ink painting — even if they just upload a photo and say something short
-  like "帮我做成水墨画" or "转成国画" without naming Wu Guanzhong explicitly,
-  or if they paste/describe a scene and ask for an ink-painting-style prompt
-  for it.
+  即梦, etc.). This skill's own logic (diagnose/route/compile) never calls
+  any image-generation API — it only produces text. If the host session the
+  assistant is running in already has a native image-generation tool
+  available, the assistant MAY call that tool itself with the compiled
+  prompt and show only the resulting image (see "第 4 步" below for the
+  exact condition and fallback). Use this skill whenever the user asks to
+  turn a photo into "吴冠中风格"、"水墨风格"、"国画风格"、ink-wash art, or
+  Chinese modern ink painting — even if they just upload a photo and say
+  something short like "帮我做成水墨画" or "转成国画" without naming Wu
+  Guanzhong explicitly, or if they paste/describe a scene and ask for an
+  ink-painting-style prompt for it.
 compatibility: Requires Python 3.8+ available on PATH (stdlib only, no
   external packages) for scripts/router.py and scripts/compiler.py.
 ---
@@ -28,8 +32,15 @@ compatibility: Requires Python 3.8+ available on PATH (stdlib only, no
 2. **路由决定**（主路线 + 至多一条辅助路线 + 明确拒绝的路线）
 3. **最终 prompt**（编译好的一段文本，附带简短的中文说明）
 
-这一版 MVP **只输出文本**，不生成图片、不调用任何图像 API。用户拿到
-prompt 后自己去粘贴到别的工具里出图。
+本 Skill 自身的诊断/路由/编译逻辑**只产出文本**，不调用任何图像 API——
+这一点不变。但如果触发这次对话的宿主环境（Claude、ChatGPT 自定义
+GPT、豆包 bot 等——只要是把这份 SKILL.md 内容当系统指令加载、并且当前
+会话里挂了原生文生图工具的场景）本身具备可调用的原生文生图能力，模型
+可以在完成第 1–3 步后自己调用那个工具直接出图，不需要用户再手动复制
+prompt 去别的工具里粘贴——具体条件和呈现方式见"第 4 步"。**能否识别出
+"这是 ChatGPT/豆包"这件事本身做不到**（Skill 没有运行时环境探测手段），
+真正可判断、也是这里唯一依据的信号是"当前会话我是否能调用一个图像生成
+工具"，不是平台名字。
 
 ## 为什么分三步，而不是直接让模型"凭感觉"写一段吴冠中风格的 prompt
 
@@ -101,7 +112,20 @@ python scripts/compiler.py --diagnosis /tmp/wgz-diagnosis.json --routing /tmp/wg
     《逍遥游》等标志性作品名称直接当模板请求（原创性硬性禁止项，见
     `references/08-originality-guardrails.md` §6.1）
 
-### 第 4 步：把三样东西呈现给用户
+### 第 4 步：呈现结果给用户（先判断有没有原生文生图工具）
+
+先判断：**当前这个对话会话里，我（模型）自己是否能直接调用一个原生的
+图像生成工具**（例如工具列表里有类似 `generate_image` / DALL·E /
+即梦 / 豆包文生图这类可调用的工具，且不需要用户手动跳出去操作）。
+
+- **判断依据只能是"当前会话工具是否可用"，不能靠猜平台名字**（不能因为
+  "系统提示里提到这是 ChatGPT"就假设一定有文生图工具，也不能因为"这是
+  Claude"就假设一定没有——以实际可调用的工具列表为准）。
+- 拿不准、或者没有明确证据证明有这个工具可用时，一律按"没有"处理，走
+  下面的【情况 A】——不要因为想"减少中间步骤"就贸然假设工具存在而直接
+  出图失败。
+
+**【情况 A：没有原生文生图工具（默认 / 当前大多数场景）】**
 
 把诊断卡摘要、路由决定摘要、最终 prompt 原文，用清晰的中文小标题分段
 展示给用户，并提醒：
@@ -111,6 +135,24 @@ python scripts/compiler.py --diagnosis /tmp/wgz-diagnosis.json --routing /tmp/wg
   出图后如果要公开发布，注意遵守 `references/08-originality-guardrails.md`
   §6.4 的说明。"（该文件的相似度检查三层法当前 MVP 无法自动执行，属于
   未来图生成阶段的工作，不需要在这一步替用户跑）
+
+**【情况 B：确认有原生文生图工具可用】**
+
+- 静默完成第 1–3 步（诊断卡、路由决定、编译 prompt 三样都照常生成），
+  但**不要**把诊断卡、路由决定、prompt 原文展示给用户——跳过中间产物的
+  展示环节。
+- 直接用编译好的 prompt 调用该图像生成工具，把生成的图片作为最终结果
+  展示给用户。
+- 即使跳过了中间产物展示，以下两条提醒仍然必须保留（简短一两句即可，
+  不用展开成清单）：
+  - 这是风格研究性质的转换，不是吴冠中真迹、官方授权或艺术家基金会产品。
+  - 如果要公开发布这张图，建议先看一眼
+    `references/08-originality-guardrails.md` §6.4。
+- 如果用户后续想看当时用的诊断卡/路由/prompt 具体内容（例如想微调效果、
+  或怀疑出图跑偏了），要能补充展示——不是永久丢弃，只是默认不主动展示。
+- 如果图像生成工具调用失败或被拒绝（内容策略拦截等），不要静默放弃：
+  如实告诉用户失败原因，并回退到【情况 A】的文本展示方式，把已经编译好
+  的 prompt 给用户，让用户自己去别的工具尝试。
 
 ## 质量自查（人工判图阶段，本 MVP 暂不自动跑）
 
